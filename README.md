@@ -1,2 +1,3 @@
-# calcutron
-Interfaces para calcular carros de compra y elementos de venta
+# Calcutron
+
+Interfaces para calcular carros de compra y elementos de venta.
