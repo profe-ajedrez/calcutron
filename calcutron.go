@@ -25,7 +25,6 @@ type Valuable interface {
 	UnitValue() decimal.Decimal
 	Discount() DiscountTuple
 	ChangeRate() decimal.Decimal
-	Dependencies() Dependencies
 
 	MakeSubtotalWithoutDiscount() decimal.Decimal
 	MakeSubtotal() decimal.Decimal
@@ -33,7 +32,6 @@ type Valuable interface {
 
 // ItemListValuable representa una lista de `ItemValuable`
 type ItemListValuable []ItemValuable
-
 
 // IDetMaker representa una cosa con la capacidad de calcular subtotales, descuentos e impuestos desde
 // los datos base de una línea de detalle.
@@ -79,7 +77,6 @@ type Taxalizer interface {
 type ListMaker interface {
 	Make(ivs ItemListValuable) ([]*Detail, []*Detail)
 }
-
 
 // Detail permite almacenar los valores subtotales calculados a partir de una
 // implementación de ItemValue
